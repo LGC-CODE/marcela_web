@@ -1,0 +1,114 @@
+body {
+	background: url('../images/wine_pouring.gif');
+	background-size: cover;
+	background-position: 0% 20%;
+	background-repeat: no-repeat;
+}
+
+nav {
+	margin-top: 1%;
+	background: #fff9;
+	color: black;
+}
+
+a {
+	color: #681d1d !important;
+	text-decoration: none;
+}
+
+.bartender {
+	padding: 10% 0;
+	color: white;
+}
+
+.bartender .container {
+	text-align: center;
+}
+
+.container p {
+	padding-top: 15%;
+	border-radius: 20px;
+	color: black;
+	opacity: 0.8 !important;
+	width: 100%;
+	height: 120px;
+}
+
+.container p:hover {
+	cursor: pointer;
+	opacity: 1 !important;
+}
+
+.overlay0 {
+	position: fixed;
+	top: 10%;
+	left: 15%;
+	width: 70%;
+	height: 70%;
+	display: none;
+	background: #576b61;
+	z-index: 1;
+	padding: 5%;
+}
+
+.overlay0 .glyphicon.glyphicon-remove {
+	cursor: pointer;
+}
+
+.overlay1 {
+	position: fixed;
+	top: 10%;
+	left: 15%;
+	width: 70%;
+	height: 70%;
+	display: none;
+	background: #576b61;
+	z-index: 1;
+	padding: 5%;
+}
+
+.overlay1 .glyphicon.glyphicon-remove {
+	cursor: pointer;
+}
+
+.overlay1 p {
+	margin-top: 5%;
+}
+
+.img-cup {
+	width: 21%;
+	background: #ffffff4d;
+	border-radius: 15%;
+}
+
+@media (max-width: 490px) { 
+	body {
+		background-size: 173%;
+		background-position: 60% 0%;
+	}
+	.img-cup {
+		width: 43%;
+		background: #ffffff4d;
+	}
+
+	.container p {
+		padding: 3%;
+		border-radius: 20px;
+		color: black;
+		opacity: 0.8 !important;
+		width: 100%;
+		height: 55px;
+	}
+	.overlay0 {
+		position: fixed;
+		top: 10%;
+		left: 15%;
+		width: 70%;
+		height: 95%;
+		display: none;
+		background: #576b61;
+		z-index: 1;
+		padding: 5%;
+		font-size: 12px;
+	}
+}
