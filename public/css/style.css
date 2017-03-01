@@ -3,6 +3,7 @@ body {
 	background-size: cover;
 	background-position: 0% 20%;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 nav {
@@ -26,12 +27,13 @@ a {
 }
 
 .container p {
-	padding-top: 15%;
 	border-radius: 20px;
 	color: black;
 	opacity: 0.8 !important;
-	width: 100%;
-	height: 120px;
+	width: 70%;
+	position: absolute;
+	top: 65%;
+	left: 25%;
 }
 
 .container p:hover {
@@ -76,9 +78,19 @@ a {
 }
 
 .img-cup {
-	width: 21%;
+	width: 30%;
 	background: #ffffff4d;
 	border-radius: 15%;
+	margin: 5%;
+}
+
+.soda {
+		margin-left: 0px;
+}
+
+.btn-martini img {
+	padding: ;
+	width: 90%;
 }
 
 @media (max-width: 490px) { 
@@ -91,14 +103,14 @@ a {
 		background: #ffffff4d;
 	}
 
-	.container p {
+	/*.container p {
 		padding: 3%;
 		border-radius: 20px;
 		color: black;
 		opacity: 0.8 !important;
 		width: 100%;
 		height: 55px;
-	}
+	}*/
 	.overlay0 {
 		position: fixed;
 		top: 10%;
@@ -110,5 +122,8 @@ a {
 		z-index: 1;
 		padding: 5%;
 		font-size: 12px;
+	}
+	.soda {
+		margin-left: 25%;
 	}
 }
