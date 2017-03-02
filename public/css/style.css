@@ -169,15 +169,21 @@ section {
 	padding: 10%;
 	display: inline-block;
 }
-
 .btn-martini:hover {
+    -moz-animation:pop 4s linear infinite;
+    animation:pop 4s linear infinite;
+    -webkit-animation-name: pop;
+    -webkit-animation-duration:4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: translateZ(200px);
+
 	display: block;
 	background: rgb(206, 36, 90);
-    -moz-animation:pop;
-    animation:pop;
-    -webkit-animation-name: pop;
 	animation-duration: 0.6s;
 	border-radius: 30px;
+
 }
 
 @keyframes pop {
