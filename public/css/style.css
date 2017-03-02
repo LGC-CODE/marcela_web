@@ -9,7 +9,6 @@ body::before {
 	content: "";
 	display: block;
 	position: fixed;
-	left: 0;
 	top: -35%;
 	width: 100%;
 	height: 135%;
@@ -23,8 +22,21 @@ body::before {
 
 nav {
 	margin-top: 1%;
-	background: #fff9;
-	color: black;
+	background: #0009;
+	color: white;
+}
+
+nav ul li a {
+	color: white !important;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+	background-color: #818181 !important;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+	color: #FFF !important;
+	background-color: #000 !important;
 }
 
 a {
@@ -138,7 +150,7 @@ a.btn.btn-primary {
 }
 
 section {
-	background: #403db1b3;
+	background: #603db1b3;
 }
 
 .btn-primary {
@@ -154,7 +166,7 @@ section {
 }
 
 .x-intercept {
-	background: rebeccapurple;
+	background: #2fab69;
 	padding: 10%;
 	color: white;
 	border-top: 14px solid #66e966;
@@ -194,6 +206,36 @@ section {
 	border-radius: 30px;	
     -webkit-animation-name: pop;
 }
+
+/*
+
+
+panels  
+
+
+*/
+
+.panel-primary > .panel-heading {
+	color: #fff !important;
+	background-color: rebeccapurple !important;
+	border-color: #fff !important;
+} 
+
+.panel-primary {
+	border-color: #fff !important;
+}
+
+.panel {
+	opacity: 0.9;
+}
+
+.panel-body:hover {
+	transform: scale(1.3);
+	background: white;
+	padding-left: 10%;
+}
+
+/* =======================*/
 
 @keyframes pop {
     0% {
@@ -271,11 +313,88 @@ section {
 		width: 100%;
 		margin-left: 0;
 	}
+	body::before {
+		top: -19%;
+		width: 186%;
+		right: 0%;
+	}
+	.box-purp {
+		padding: 52% 25px;
+		color: white;
+	}
+
+
+	.box-green {
+		padding: 75% 25px;
+		color: white;
+		background: #00d263e6;
+	}
+
+	.box-blue {
+		padding: 75% 25px;
+		color: white;
+		background: #004bffcc;
+	}
 }
 @media (min-width: 670px) { 
 	.carousel {
 		position: relative;
 		width: 50%;
 		margin-left: 25%;
+		height: 135%;
 	}
 }
+
+/* 
+
+about bartender
+
+*/
+.box-purp {
+	background: #603db1b3;
+	padding: 5% 0%;
+}
+
+.box-yellow {
+	padding: 15% 25px;
+	color: white;
+	text-align: center;
+	background: #d2d032e6;
+}
+
+
+.box-green {
+	padding: 15% 25%;
+	color: white;
+	background: #00d263e6;
+	text-align: center;
+}
+
+.box-blue {
+	padding: 15% 25%;
+	color: white;
+	background: #004bffcc;
+	text-align: center;
+}
+
+/******************/
+
+/*
+
+footer
+
+*/
+
+
+
+footer {
+	background: black;
+	padding: 3%;
+	color: white;
+	border-top: 9px solid lightgreen;
+}
+
+
+
+
+/****************************/

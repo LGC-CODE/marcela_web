@@ -2,7 +2,7 @@
 <head>
 	<title>Bartender in the bay area, wine, tequila, vodka, rum, conjac, ciroc for parties</title>
 	<meta name="keywords" content="bartender, conjac, ciroc, wine, don julio, henessy, vodka, catering, mobile, affordable bartender, party bartender, social bartender" />
-	<meta name="description" content="Need a bartender that is available and in your budget? Call 510-999-9999. We're here to serve you! Click to learn more" />
+	<meta name="description" content="Need a bartender that is available and in your budget? Call 510-689-7274. We're here to serve you! Click to learn more" />
     <meta name="author" content="">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,25 +28,7 @@ http://www.templatemo.com/tm-408-polystar
 </head>
 </head>
 <body>
-	<nav>
-		<ul class="nav nav-tabs nav-justified visible-md visible-lg visible-xl">
-			<li role="presentation" class="active"><a href="#">Home</a></li>
-			<li role="presentation"><a href="#">Profile</a></li>
-			<li role="presentation"><a href="#">Messages</a></li>
-		</ul>
-		<ul class="nav nav-tabs visible-xs visible-sm">
-			<li role="presentation" class="dropdown  pull-right">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-					Menu <span class="caret"></span>
-				</a>
-				<ul class="dropdown-menu">
-					<li role="presentation" class="active"><a href="#">Home</a></li>
-					<li role="presentation"><a href="#">Profile</a></li>
-					<li role="presentation"><a href="#">Messages</a></li>				
-				</ul>
-			</li>
-		</ul>
-	</nav>
+		<%- include partials/navbar.ejs %>
 	<section>
 		<%- include partials/carousel.ejs %>
 	</section>
@@ -75,7 +57,7 @@ http://www.templatemo.com/tm-408-polystar
 						We provide bartenders with more than 10 years of experience who have taken care of events with more than 300 guests.<br><br>
 						The only thing you have to worry is that YOU enjoy your drink!<br><br>
 						Choose a package or customize your own; we will adapt to your needs and budget!</p>
-						<a href="tel:510-999-9999" class="btn btn-primary">Click to open phone dialer <span class="glyphicon glyphicon-phone"></span></a href="tel:713-222-2222">
+						<a href="tel:510-689-7274" class="btn btn-primary">Click to open phone dialer <span class="glyphicon glyphicon-phone"></span></a href="tel:713-222-2222">
 				</center>
 			</div>
 		</div>
@@ -119,34 +101,31 @@ http://www.templatemo.com/tm-408-polystar
 		</div>
 	</section>
 	<section class="middle">
-		<div class="panel panel-success">
+		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title">Panel title</h3>
+				<h3 class="panel-title">Bartending Service</h3>
 			</div>
 			<div class="panel-body">
-				Panel content
+				Done Professionally <a class="btn btn-primary" href="tel:510-689-7274">Call Now : <span class="glyphicon glyphicon-phone"></span></a>
 			</div>
 		</div>
-		<div class="panel panel-success">
+		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title">Panel title</h3>
+				<h3 class="panel-title">With more than 10 years of experience</h3>
 			</div>
 			<div class="panel-body">
-				Panel content
+				We Deliver the best service! <a class="btn btn-primary" href="tel:510-689-7274">Call Now : <span class="glyphicon glyphicon-phone"></span></a>
 			</div>
 		</div>
-		<div class="panel panel-success">
+		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title">Panel title</h3>
+				<h3 class="panel-title">Only one thing to worry about:</h3>
 			</div>
 			<div class="panel-body">
-				Panel content
+				Enjoying your drink! <a class="btn btn-primary" href="tel:510-689-7274">Call Now : <span class="glyphicon glyphicon-phone"></span></a>
 			</div>
 		</div>
 	</section>
-	<footer>
-    	Copyright © 2084 Company Name<br>
-		Photos by <a rel="nofollow" href="http://unsplash.com">Unsplash</a>
-    </footer>
+	<%- include partials/footer.ejs %>
 </body>
 </html>
