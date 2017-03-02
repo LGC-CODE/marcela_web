@@ -173,7 +173,9 @@ section {
 .btn-martini:hover {
 	display: block;
 	background: rgb(206, 36, 90);
-	animation-name: pop;
+    -moz-animation:pop;
+    animation:pop;
+    -webkit-animation-name: pop;
 	animation-duration: 0.6s;
 	border-radius: 30px;
 }
