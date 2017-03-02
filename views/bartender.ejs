@@ -17,11 +17,15 @@ http://www.templatemo.com/tm-408-polystar
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="/js/jquery.fancybox.pack.js"></script>
-	<script src="js/templatemo_custom.js"></script>
+	<!-- <script src="/js/jquery.fancybox.pack.js"></script> -->
+	<script src="/js/owl.carousel.js"></script>
+	<script src="/js/templatemo_custom.js"></script>
+</head>
 </head>
 <body>
 	<nav>
@@ -46,6 +50,9 @@ http://www.templatemo.com/tm-408-polystar
 	<section>
 		<%- include partials/carousel.ejs %>
 	</section>
+	<section class="x-intercept">
+		<p>Best bartender in town. We adapt to your budget. Professional and Reliable. Local Bartending at a low cost. We serve all types of different drinks!</p>
+	</section>
 	<section class="bartender">
 		<div class="overlay0">
 			<span class="glyphicon glyphicon-remove"></span> Close
@@ -68,46 +75,72 @@ http://www.templatemo.com/tm-408-polystar
 						We provide bartenders with more than 10 years of experience who have taken care of events with more than 300 guests.<br><br>
 						The only thing you have to worry is that YOU enjoy your drink!<br><br>
 						Choose a package or customize your own; we will adapt to your needs and budget!</p>
-						<a href="tel:713-222-2222" class="btn btn-primary">Click to open phone dialer <span class="glyphicon glyphicon-phone"></span></a href="tel:713-222-2222">
+						<a href="tel:510-999-9999" class="btn btn-primary">Click to open phone dialer <span class="glyphicon glyphicon-phone"></span></a href="tel:713-222-2222">
 				</center>
 			</div>
 		</div>
 		<div class="container">
-			<div class="btn-martini col-xs-6 col-md-4">
+			<div onclick="overlay('over1')" class="btn-martini col-xs-6 col-md-4">
 				<img src="/images/martini_green.png">
-				<p style="background: lightgreen;" onclick="overlay('over1')">How Much How?</p>
+				<p style="background: lightgreen;">How Much How?</p>
 			</div>
-			<div class="btn-martini col-xs-6 col-md-4">
+			<div onclick="overlay('over1')" class="btn-martini col-xs-6 col-md-4">
 				<img src="/images/martini_green.png">
-				<p style="background: lightblue;" onclick="overlay('over1')">How Many?</p>
+				<p style="background: lightblue;">How Many?</p>
 			</div>
-			<div class="btn-martini col-xs-6 col-md-4">
+			<div onclick="overlay('over1')" class="btn-martini col-xs-6 col-md-4">
 				<img src="/images/martini_green.png">
-				<p style="background: lightyellow;" onclick="overlay('over1')">What Else Do I Need?</p>
+				<p style="background: lightyellow;">What Else Do I Need?</p>
 			</div>
-			<div class="btn-martini col-xs-6 col-md-4">
+			<div onclick="overlay('over1')" class="btn-martini col-xs-6 col-md-4">
 				<img src="/images/martini_green.png">
-				<p style="background: lightpink;" onclick="overlay('over1')">Wine?</p>
+				<p style="background: lightpink;">Wine?</p>
 			</div>
-			<div class="btn-martini col-xs-6 col-md-4">
+			<div onclick="overlay('over1')" class="btn-martini col-xs-6 col-md-4">
 				<img src="/images/martini_green.png">
-				<p style="background: #4444ec;" onclick="overlay('over1')">Beer?</p>
+				<p style="background: #4444ec;">Beer?</p>
 			</div>
-			<div class="btn-martini col-xs-6 col-md-4">
+			<div onclick="overlay('over1')" class="btn-martini col-xs-6 col-md-4">
 				<img src="/images/martini_green.png">
-				<p style="background: #e9b556;" onclick="overlay('over1')">Tequila?</p>
+				<p style="background: #e9b556;">Tequila?</p>
 			</div>
-			<div class="btn-martini soda col-xs-6 col-md-4">
+			<div onclick="overlay('over1')" class="btn-martini soda col-xs-6 col-md-4">
 				<img src="/images/martini_green.png">
-				<p style="background: purple;" onclick="overlay('over1')">Soda?</p>
+				<p style="background: purple;">Soda?</p>
 			</div>
-			<div class="btn-martini col-xs-6 col-md-4">
+			<div onclick="overlay('over1')" class="btn-martini col-xs-6 col-md-4">
 				<img src="/images/martini_green.png">
-				<p style="background: #58e4e4;" onclick="overlay('over1')">Who Will Serve and Clean?</p>
+				<p style="background: #58e4e4;">Who Will Serve and Clean?</p>
 			</div>
-			<div class="btn-martini col-xs-6 col-md-4">
+			<div onclick="overlay('over1')" class="btn-martini col-xs-6 col-md-4">
 				<img src="/images/martini_green.png">
-				<p style="background: pink;" onclick="overlay('over1')">What Else do I Need? Who is Going to Take it There?</p>
+				<p style="background: pink;">What Else do I Need? Who is Going to Take it There?</p>
+			</div>
+		</div>
+	</section>
+	<section class="middle">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">Panel title</h3>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">Panel title</h3>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">Panel title</h3>
+			</div>
+			<div class="panel-body">
+				Panel content
 			</div>
 		</div>
 	</section>
