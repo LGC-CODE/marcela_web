@@ -17,7 +17,7 @@ http://www.templatemo.com/tm-408-polystar
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+	<link href="/css/owl.carousel.css" rel="stylesheet" type="text/css">
 
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
@@ -26,14 +26,34 @@ http://www.templatemo.com/tm-408-polystar
 	<script src="/js/owl.carousel.js"></script>
 	<script src="/js/templatemo_custom.js"></script>
 </head>
-</head>
 <body>
 		<%- include partials/navbar.ejs %>
+	<section class="header">
+		<div class="owl-carousel">
+			<div class="item">
+				<h1>We provide the best service for any party to come alive!</h1>
+				<a class="btn btn-primary" href="tel:510-689-7274"><span class="glyphicon glyphicon-phone"></span> Click Here to Call Us!</a>
+			</div>	
+			<div class="item">
+				<h1>Ready to set up the best party of the year? Call Us Now!</h1>
+				<a class="btn btn-primary" href="tel:510-689-7274"><span class="glyphicon glyphicon-phone"></span> Click Here to Call Us!</a>
+			</div>	
+			<div class="item">
+				<h1>The best party of the year is waiting for you to call it in!</h1>
+				<a class="btn btn-primary" href="tel:510-689-7274"><span class="glyphicon glyphicon-phone"></span> Click Here to Call Us!</a>
+			</div>				
+		</div>
+	</section>
 	<section>
 		<%- include partials/carousel.ejs %>
 	</section>
 	<section class="x-intercept">
-		<p>Best bartender in town. We adapt to your budget. Professional and Reliable. Local Bartending at a low cost. We serve all types of different drinks!</p>
+		<div class="col-md-6">
+			<p>Best bartender in town. We adapt to your budget. Professional and Reliable. Local Bartending at a low cost. We serve all types of different drinks!</p>
+		</div>
+		<div class="col-md-6">
+			<img width="100%" src="/images/drink1.jpeg">
+		</div>
 	</section>
 	<section class="bartender">
 		<div class="overlay0">
@@ -57,7 +77,7 @@ http://www.templatemo.com/tm-408-polystar
 						We provide bartenders with more than 10 years of experience who have taken care of events with more than 300 guests.<br><br>
 						The only thing you have to worry is that YOU enjoy your drink!<br><br>
 						Choose a package or customize your own; we will adapt to your needs and budget!</p>
-						<a href="tel:510-689-7274" class="btn btn-primary">Click to open phone dialer <span class="glyphicon glyphicon-phone"></span></a href="tel:713-222-2222">
+						<a href="tel:510-689-7274" class="btn btn-primary">Click to open phone dialer <span class="glyphicon glyphicon-phone"></span></a href="tel:510-689-7274">
 				</center>
 			</div>
 		</div>
@@ -75,15 +95,15 @@ http://www.templatemo.com/tm-408-polystar
 				<p style="background: lightyellow;" onclick="overlay('over1')">What Else Do I Need?</p>
 			</div>
 			<div class="btn-martini pictureFrame col-xs-6 col-md-4">
-				<img src="/images/martini_green.png">
+				<img class="wine" src="/images/martini_wine.png">
 				<p style="background: lightpink;" onclick="overlay('over1')">Wine?</p>
 			</div>
 			<div class="btn-martini pictureFrame col-xs-6 col-md-4">
-				<img src="/images/martini_green.png">
+				<img class="beer" src="/images/beer.png">
 				<p style="background: #4444ec;" onclick="overlay('over1')">Beer?</p>
 			</div>
 			<div class="btn-martini pictureFrame col-xs-6 col-md-4">
-				<img src="/images/martini_green.png">
+				<img src="/images/tequila.png">
 				<p style="background: #e9b556;" onclick="overlay('over1')">Tequila?</p>
 			</div>
 			<div class="btn-martini pictureFrame soda col-xs-6 col-md-4">
@@ -100,30 +120,56 @@ http://www.templatemo.com/tm-408-polystar
 			</div>
 		</div>
 	</section>
-	<section class="middle">
+	<section class="transparent">
+		<center>
+			<div class="col-md-12">
+				<img width="100%" src="/images/wine_panic.gif">
+			</div>
+			<div class="col-md-12">
+				<a href="tel:510-689-7274" class="btn btn-primary">I want to know more! <span class="glyphicon glyphicon-phone"></span></a>
+				
+				<h2 style="color: white;">Send us an Email!</h2>
+				<form id="form" class="form-group">
+					<label>Name</label>
+					<input class="form-control" type="text" id="f-name">	
+					<label>Message</label>
+					<input class="form-control" type="text" id="f-message">	<br>
+					<button onclick="getinfo()" class="btn btn-default">Submit</button>
+			    </form>
+			
+			</div>
+		</center>
+	</section>
+	<section class="middle"> 
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<h3 class="panel-title">Bartending Service</h3>
 			</div>
-			<div class="panel-body">
-				Done Professionally <a class="btn btn-primary" href="tel:510-689-7274">Call Now : <span class="glyphicon glyphicon-phone"></span></a>
-			</div>
+			<center>
+				<div class="panel-body">
+					Done Professionally <br><br><a class="btn btn-primary" href="tel:510-689-7274">Call Now : <span class="glyphicon glyphicon-phone"></span></a>
+				</div>
+			</center>
 		</div>
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<h3 class="panel-title">With more than 10 years of experience</h3>
 			</div>
-			<div class="panel-body">
-				We Deliver the best service! <a class="btn btn-primary" href="tel:510-689-7274">Call Now : <span class="glyphicon glyphicon-phone"></span></a>
-			</div>
+			<center>
+				<div class="panel-body">
+					We Deliver the best service! <br><br><a class="btn btn-primary" href="tel:510-689-7274">Call Now : <span class="glyphicon glyphicon-phone"></span></a>
+				</div>
+			</center>
 		</div>
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<h3 class="panel-title">Only one thing to worry about:</h3>
 			</div>
+			<center>
 			<div class="panel-body">
-				Enjoying your drink! <a class="btn btn-primary" href="tel:510-689-7274">Call Now : <span class="glyphicon glyphicon-phone"></span></a>
+				Enjoying your drink! <br><br><a class="btn btn-primary" href="tel:510-689-7274">Call Now : <span class="glyphicon glyphicon-phone"></span></a>
 			</div>
+			</center>
 		</div>
 	</section>
 	<%- include partials/footer.ejs %>
