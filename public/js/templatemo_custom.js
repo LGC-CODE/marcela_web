@@ -53,8 +53,6 @@ function getinfo(){
 		link += subject;
 		link += '&body=';
 		link += body;
-		
-		form.reset();
 
 		window.location.href = link;
 
