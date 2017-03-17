@@ -54,7 +54,7 @@ function getinfo(){
 		link += '&body=';
 		link += body;
 
-		window.location.href = link;
+		window.open(link);
 
 }
 
