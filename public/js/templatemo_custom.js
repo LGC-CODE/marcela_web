@@ -36,25 +36,28 @@ $(document).ready(function(){
 	});
 });
 
-function getinfo(){
+function getinfo(e){
+	e.preventDefault();
+
 	var name = document.getElementById('f-name').value;
 	var message = document.getElementById('f-message').value;
-	var form = document.getElementById('form');
+	var form =  document.getElementById('form');
 
 	if(!name || !message){
 		alert('please fill out all fields');
 		return;
-	}
-
-	var subject = encodeURIComponent('I would like more information about your bartending service');
-	var body = encodeURIComponent(message);
+	} else {
+		var subject = encodeURIComponent('I would like more information about your bartending service');
+		var body = encodeURIComponent(message);
 
 		var link = "mailto:luisconstante@yahoo.com?subject=";
 		link += subject;
 		link += '&body=';
 		link += body;
+		form.reset();
 
-		window.open(link);
+		window.location.href = link;
+	}
 
 }
 
