@@ -45,6 +45,21 @@ nav ul li a {
 	background-color: #000 !important;
 }
 
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #000 !important;
+	outline: 0;
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+	background-color: #7b4870 !important;
+}
+
+.dropdown-menu {
+	background-color: #565656 !important;
+}
+
 a {
 	color: #681d1d !important;
 	text-decoration: none;
@@ -71,6 +86,24 @@ a {
 .item a {
 	margin: 2%;
 	font-size: 1pc !important;
+}
+
+#slider .item img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+#slider {
+	margin: 10% auto;
+}
+
+.owl-carousel {
+	width: 350px !important;
+}
+
+.owl-carousel-bartender {
+	width: 100% !important;
 }
 
 .bartender {
@@ -420,6 +453,9 @@ panels
 	.header {
 		background-position-x: 35%;
 	}
+	.owl-carousel {
+		width: 295px !important;
+	}
 }
 @media (min-width: 670px) { 
 	.carousel {
@@ -460,6 +496,41 @@ about bartender
 	color: white;
 	background: #004bffcc;
 	text-align: center;
+}
+
+/*
+
+main index page
+
+*/
+
+#main-bg::before {
+	content: "";
+	display: block;
+	position: fixed;
+	top: -27%;
+	width: 100%;
+	height: 135%;
+	z-index: -10;
+	background: url('../images/hexagon-bg.png') no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.main-grid {
+	display: inline-block;
+	padding: 1%;
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+
+.main-box {
+	background: #54327ee6;
+	height: 295px;
+	border: 1px solid #c6b8b8;
+	color: white;
 }
 
 /******************/

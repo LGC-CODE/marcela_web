@@ -6,6 +6,9 @@ function overlay(elem){
 	}
 }
 $(document).ready(function(){
+
+	setActive(); //set nav item to active
+
 	$('.overlay0 .glyphicon.glyphicon-remove').on('click', function(){
 		$('.overlay0').fadeOut(1000);
 	});
@@ -31,6 +34,26 @@ $(document).ready(function(){
 	        },
 	        1000:{
 	            items:1
+	        }
+	    }
+	});
+    $('#slider').owlCarousel({
+	    rtl:false,
+	    autoplay: true,
+	    loop:true,
+	    margin:0,
+	    nav:false,   
+    	autoplayTimeout:3500,
+    	autoplayHoverPause:true,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:2
+	        },
+	        1000:{
+	            items:3
 	        }
 	    }
 	});
@@ -60,6 +83,24 @@ function getinfo(e){
 	}
 
 }
+
+function setActive(){
+	var host = window.location.host;
+	var location = 'http://' + host;
+
+	if(window.location.href === location + '/'){
+		$('.first-nav').addClass('active');
+	} else if(window.location.href === location + '/dj'){
+		$('.second-nav').addClass('active');
+	} else if(window.location.href === location + '/bartender'){
+		$('.third-nav').addClass('active');
+	} else if(window.location.href === location + '/bartender/about'){
+		$('.fourth-nav').addClass('active');
+	}
+
+	console.log(window.location.href, '\n', window.location.host);
+};
+
 
 
 
