@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
-	<title>Bartender for parties in the bay area, oakland, fremont, san francisco, hayward, san leandro</title>
-	<meta name="keywords" content="bartender, conjac, ciroc, wine, don julio, henessy, vodka, catering, mobile, affordable bartender, party bartender, social bartender" />
-	<meta name="description" content="Batender in the bay area, affordable, vodka, rum, tequila, ciroc, beer, wine 510-689-7274" />
+	<title>best dj service in the bay area, local dj service, affordable dj near oakland, great dj service in san francisco</title>
+	<meta name="keywords" content="dj, bay, area, san leandro, oakland, dj san francisco" />
+	<meta name="description" content="dj in the bay area, party dj, affordable dj, quality dj service, best dj in the bay area, call <%= marcela %>" />
     <meta name="author" content="">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +19,8 @@ http://www.templatemo.com/tm-408-polystar
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/owl.carousel.css" rel="stylesheet" type="text/css">
 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css">
+
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -27,23 +29,57 @@ http://www.templatemo.com/tm-408-polystar
 	<script src="/js/templatemo_custom.js"></script>
 </head>
 </head>
-<body>
+<body class="dj-bg">
 	
 		<%- include partials/navbar.ejs %>
-	<section class="box-yellow">
-		<p>We Provide Professional Bartending Service. We work all around the bay area. Also, we can adapt to your budget and needs. Feel free to contact us!</p>
-		<a class="btn btn-primary" href="tel:510-689-7274">Call Now <span class="glyphicon glyphicon-phone"></span></a>
+	<section class="box-red">
+		<p>We have the best DJ Service in the bay area! Let us know your party needs and we will do our best to fulfill those requests!</p>
+		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
+		<div class="arrow-hover">
+			<a href="#down">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+			</a>
+		</div>
 	</section>
-	<section class="box-purp">
-		<%- include partials/carousel.ejs %>
+	<section id="down" class="box-green">
+		<p>The DJ Service we offer is of good quality featuring the best songs of the year! We can adapt you your budget!</p>
+		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
 	</section>
-	<section class="box-green">
-		<p>Our approach towards serving different kinds of drinks is essential for a professional bartender. We serve different drinks including Ciroc, a great choice to start off the night.</p>
-		<a class="btn btn-primary" href="tel:510-689-7274">Call Now <span class="glyphicon glyphicon-phone"></span></a>
+	<section class="slider-section">
+		<center>
+			<div id="djslider" class="owl-carousel owl-theme">
+				<div class="item">
+					<img src="/images/dj0.JPG">
+				</div>
+				<div class="item">
+					<img src="/images/dj1.JPG">
+				</div>
+				<div class="item">
+					<img src="/images/dj2.JPG">
+				</div>
+				<div class="item">
+					<img src="/images/dj4.JPG">
+				</div>
+			</div>
+			<div id="mydots"></div>
+		</center>
+		<img class="hand-gesture" width="50%" src="/images/hand-gesture.gif">
 	</section>
 	<section class="box-blue">
-		<p>Feeling like a rockstar? Try drinking our specialty drinks featuring Vodka!</p>
-		<a class="btn btn-primary" href="tel:510-689-7274">Call Now <span class="glyphicon glyphicon-phone"></span></a>
+		<p>Want to bring the best DJ to your party? Turn your party into the most popular in the area! Our DJ can provide what's needed to create the best experience in your event!</p>
+		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
+	</section>
+	<section class="box-green">
+		<h2 style="color: white;">Send us an Email!</h2>
+		<p>Let's Plan Your Party Together!</p>
+		<form id="form" class="form-group">
+			<label>Name</label>
+			<input class="form-control" type="text" id="f-name">	
+			<label>Message</label>
+			<textarea cols="5" rows="4" class="form-control" type="text" id="f-message"></textarea>
+				<br>
+			<p onclick="getinfo('f-message', 'f-name', 'dj');" class="btn btn-default">Submit</p 			    
+		</form>
 	</section>
 
 	<%- include partials/footer.ejs %>

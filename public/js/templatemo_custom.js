@@ -1,3 +1,5 @@
+var switchbool = '';
+
 function overlay(elem){
 	if(elem === 'over'){
 		$('.overlay0').fadeIn(1000);
@@ -5,6 +7,14 @@ function overlay(elem){
 		$('.overlay1').fadeIn(1000);
 	}
 }
+
+function showgesture(range1, range2){
+    if(window.scrollY >= range1 && window.scrollY <= range2 && switchbool === ''){
+        $('.hand-gesture').fadeIn(1500).delay(2500).fadeOut(1500);
+        switchbool = true;
+    }
+}
+
 $(document).ready(function(){
 
 	setActive(); //set nav item to active
@@ -57,20 +67,42 @@ $(document).ready(function(){
 	        }
 	    }
 	});
+	$('#djslider').owlCarousel({
+	    rtl:false,
+	    autoplay: true,
+	    loop:true,
+	    margin:0,
+	    nav:true, 
+	    dots: true,
+	    dotsContainer: 'mydots',
+	    navText: true,  
+    	autoplayTimeout:3500,
+    	autoplayHoverPause:true,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:2
+	        },
+	        1000:{
+	            items:3
+	        }
+	    }
+	});
 });
 
-function getinfo(e){
-	e.preventDefault();
+function getinfo(messageId, nameId, customServiceName){
 
-	var name = document.getElementById('f-name').value;
-	var message = document.getElementById('f-message').value;
+	var name = document.getElementById(nameId).value;
+	var message = document.getElementById(messageId).value;
 	var form =  document.getElementById('form');
 
 	if(!name || !message){
 		alert('please fill out all fields');
 		return;
 	} else {
-		var subject = encodeURIComponent('I would like more information about your bartending service');
+		var subject = encodeURIComponent('I would like more information about your ' + customServiceName + ' service');
 		var body = encodeURIComponent(message);
 
 		var link = "mailto:luisconstante@yahoo.com?subject=";
@@ -89,9 +121,15 @@ function setActive(){
 	var location = 'http://' + host;
 
 	if(window.location.href === location + '/'){
+
+		window.onscroll = function(){ showgesture(455, 475); };
 		$('.first-nav').addClass('active');
+
 	} else if(window.location.href === location + '/dj'){
+
+		window.onscroll = function(){ showgesture(680, 700); };
 		$('.second-nav').addClass('active');
+
 	} else if(window.location.href === location + '/bartender'){
 		$('.third-nav').addClass('active');
 	} else if(window.location.href === location + '/bartender/about'){
@@ -99,7 +137,7 @@ function setActive(){
 	}
 
 	console.log(window.location.href, '\n', window.location.host);
-};
+}
 
 
 

@@ -29,7 +29,7 @@ http://www.templatemo.com/tm-408-polystar
 <body>
 		<%- include partials/navbar.ejs %>
 	<section class="header">
-		<div class="owl-carousel owl-carousel-bartender">
+		<div id="bartender-owl" class="owl-carousel">
 			<div class="item">
 				<h1>We provide the best service for any party to come alive!</h1>
 				<a class="btn btn-primary" href="tel:510-689-7274"><span class="glyphicon glyphicon-phone"></span> Click Here to Call Us!</a>
@@ -135,7 +135,7 @@ http://www.templatemo.com/tm-408-polystar
 					<label>Message</label>
 					<textarea cols="5" rows="4" class="form-control" type="text" id="f-message"></textarea>
 						<br>
-					<p onclick="getinfo(event);" class="btn btn-default">Submit</p 			    
+					<p onclick="getinfo('f-message', 'f-name', 'Bartending');" class="btn btn-default">Submit</p 			    
 				</form>
 			
 			</div>

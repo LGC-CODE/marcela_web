@@ -20,6 +20,14 @@ body::before {
 	background-size: 100%;
 }
 
+.hand-gesture {
+	position: absolute;
+	top: 45%;
+	width: 45%;
+	z-index: 1;
+	left: 30%;
+}
+
 body {
 	margin: 0;
 }
@@ -96,14 +104,11 @@ a {
 
 #slider {
 	margin: 10% auto;
+	width: 295px;
 }
 
-.owl-carousel {
-	width: 350px !important;
-}
-
-.owl-carousel-bartender {
-	width: 100% !important;
+#bartender-owl {
+	width: 100%;
 }
 
 .bartender {
@@ -333,6 +338,18 @@ panels
 
 /* =======================*/
 
+@keyframes hoverInPlace {
+    0% {
+        padding-top: 0%;
+    }
+    50% {
+        padding-top: 1%;
+    }
+    100% {
+    	padding-top: 0%;
+    }
+}
+
 @keyframes pop {
     0% {
         transform:rotateY(180deg);
@@ -453,8 +470,30 @@ panels
 	.header {
 		background-position-x: 35%;
 	}
-	.owl-carousel {
-		width: 295px !important;
+	#bartender-owl {
+		width: 280px;
+	}
+
+	#djslider {
+		width: 300px !important;
+	}
+
+	.dj-bg::before {
+		top: 5% !important;
+		width: 176% !important;
+		background-size: 235% !important;
+		left: -74% !important;
+	}
+	.box-red {
+		padding: 77% 2% !important;
+	}
+	.hand-gesture {
+		position: fixed;
+		top: 35%;
+		left: 37%;
+		width: 30%;
+		z-index: 1;
+		display: none;
 	}
 }
 @media (min-width: 670px) { 
@@ -496,6 +535,62 @@ about bartender
 	color: white;
 	background: #004bffcc;
 	text-align: center;
+}
+
+/*
+
+dj page
+
+*/
+
+.box-red {
+	padding: 22% 2%;
+	background: #0000001a;
+	color: white;
+	text-align: center;
+}
+
+.box-red p {
+	background: #921a1a;
+	padding: 2%;
+	border-radius: 30px 0px 0px 30px;	
+}
+
+.slider-section {
+	background: #00f6ffcc;
+	padding: 4%;
+	position: relative;
+}
+
+.dj-bg::before {
+	content: "";
+	display: block;
+	position: fixed;
+	top: -27%;
+	width: 145%;
+	height: 135%;
+	z-index: -10;
+	background: url('../images/dj-bg.gif') no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 100%;
+}
+
+#djslider {
+	width: 800px;
+}
+
+
+.arrow-hover span {
+	position: absolute;
+	top: 75%;
+	left: 48.7%;
+	-moz-animation: hoverInPlace 2s infinite;
+	-webkit-animation: hoverInPlace 2s infinite;
+	animation: hoverInPlace 2s infinite;
+	font-size: 33px;
+	color: white;
 }
 
 /*
