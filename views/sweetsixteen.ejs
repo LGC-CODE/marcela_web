@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+	<title>best dj service in the bay area, local dj service, affordable dj near oakland, great dj service in san francisco</title>
+	<meta name="keywords" content="dj, bay, area, san leandro, oakland, dj san francisco" />
+	<meta name="description" content="dj in the bay area, party dj, affordable dj, quality dj service, best dj in the bay area, call <%= marcela %>" />
+    <meta name="author" content="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+
+Polystar Template
+
+http://www.templatemo.com/tm-408-polystar
+
+-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css">
+
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <script src="/js/jquery.fancybox.pack.js"></script> -->
+	<script src="/js/owl.carousel.js"></script>
+	<script src="/js/templatemo_custom.js"></script>
+</head>
+</head>
+<body class="ss-bg">
+	
+		<%- include partials/navbar.ejs %>
+	<section class="box-red ss-text">
+		<p>Want to create the best and unforgetable sweet sixteen party for your daughter? Call us today and lets plan it together!</p>
+		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
+		<div class="arrow-hover">
+			<a href="#down">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+			</a>
+		</div>
+	</section>
+	<section id="down" class="box-purple">
+		<p>We are ready to take on any party size! Our services include high quality and responsible coordination. If you want everything to go smoothly on your party, plan it with us!</p>
+		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
+	</section>
+	<section class="slider-ss-section box-pink">
+		<%- include partials/owl.ejs %>
+	</section>
+	<section class="box-yellow">
+		<p>The perfect party is just one call away! We ensure and take responsiblity that your party turns out the way You want it!</p>
+		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
+	</section>
+	<section class="box-black">
+		<h2 style="color: white;">Send us an Email!</h2>
+		<p>Let's Plan Your Party Together!</p>
+		<form id="form" class="form-group">
+			<label>Name</label>
+			<input class="form-control" type="text" id="s-name">	
+			<label>Message</label>
+			<textarea cols="5" rows="4" class="form-control" type="text" id="s-message"></textarea>
+				<br>
+			<p onclick="getinfo('s-message', 's-name', 'sweetsixteen');" class="btn btn-default">Submit</p 			    
+		</form>
+	</section>
+
+	<%- include partials/footer.ejs %>
+
+</body>
+</html>

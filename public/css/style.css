@@ -20,12 +20,17 @@ body::before {
 	background-size: 100%;
 }
 
+.form-control {
+	background-color: #540e5699 !important;
+}
+
 .hand-gesture {
 	position: absolute;
 	top: 45%;
 	width: 45%;
 	z-index: 1;
 	left: 30%;
+	display: none;
 }
 
 body {
@@ -107,6 +112,26 @@ a {
 	width: 295px;
 }
 
+.slider-ss-section #slider {
+	width: 700px;
+}
+
+.main-box img.hand-gesture {
+	position: absolute;
+	top: 45%;
+	width: 30%;
+	z-index: 1;
+	left: 50%;
+}
+
+.hand-gesture {
+	position: absolute;
+	top: 45%;
+	width: 10%;
+	z-index: 1;
+	left: 50%;
+}
+
 #bartender-owl {
 	width: 100%;
 }
@@ -118,6 +143,11 @@ a {
 
 .bartender .container {
 	text-align: center;
+}
+
+#form.bartender-form {
+	width: 40%;
+	text-align: left;
 }
 
 .container p {
@@ -495,6 +525,20 @@ panels
 		z-index: 1;
 		display: none;
 	}
+	.ss-bg::before {
+		top: 0% !important;
+		width: 145% !important;
+		background-size: 155% !important;
+		left: -45% !important;
+	}
+
+	.slider-ss-section #slider {
+		width: 293px;
+	}
+
+	.box-pink {
+		padding: 35% 0 !important;
+	}
 }
 @media (min-width: 670px) { 
 	.carousel {
@@ -622,13 +666,85 @@ main index page
 }
 
 .main-box {
-	background: #54327ee6;
+	background: #000;
 	height: 295px;
 	border: 1px solid #c6b8b8;
-	color: white;
+	color: #b6941d;
+	text-shadow: -4px 0 3px #5e29b6;
 }
 
 /******************/
+
+/*
+
+sweet sixteen
+
+*/
+
+.ss-text p {
+	background: #5d4c92;
+	padding: 2%;
+	border-radius: 30px 0px 0px 30px;
+	font-size: 1.5pc;
+}
+
+.ss-bg::before {
+	content: "";
+	display: block;
+	position: fixed;
+	top: -35%;
+	width: 145%;
+	height: 135%;
+	z-index: -10;
+	background: url('../images/ss0.gif') no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 70%;
+}
+
+.box-pink {
+	padding: 5% 25%;
+	color: white;
+	background: #ff00a299;
+	text-align: center;
+	position: relative;
+}
+
+.box-yellow {
+	padding: 15% 25%;
+	color: white;
+	background: #ffe100b3;
+	text-align: center;
+}
+
+.box-purple {
+	padding: 15% 25%;
+	color: white;
+	background: #2100ffb3;
+	text-align: center;
+}
+
+.box-black {
+	padding: 15% 25%;
+	color: white;
+	background: #000c;
+	text-align: center;
+}
+
+/*
+
+sweet sixteen
+
+*/
+
+.box-contact {
+	background: #3bbff399;
+}
+
+.form-control {
+	color: #67aac5 !important;
+}
 
 /*
 

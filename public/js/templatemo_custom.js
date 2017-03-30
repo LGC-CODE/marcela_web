@@ -8,10 +8,15 @@ function overlay(elem){
 	}
 }
 
-function showgesture(range1, range2){
-    if(window.scrollY >= range1 && window.scrollY <= range2 && switchbool === ''){
-        $('.hand-gesture').fadeIn(1500).delay(2500).fadeOut(1500);
+function showgesture(range1, range2, range3, range4){
+    if(window.scrollY >= range1 && window.scrollY <= range2 && switchbool === '' && window.innerWidth < 1020){
+        $('.hand-gesture').fadeIn(1000).delay(1000).fadeOut(1000);
         switchbool = true;
+        console.log('xs-screen triggered');
+    } else if(window.scrollY >= range3 && window.scrollY <= range4 && switchbool === '' && window.innerWidth > 1020){
+		$('.hand-gesture').fadeIn(1000).delay(1000).fadeOut(1000);
+        switchbool = true;
+        console.log('lg-screen triggered');
     }
 }
 
@@ -122,18 +127,23 @@ function setActive(){
 
 	if(window.location.href === location + '/'){
 
-		window.onscroll = function(){ showgesture(455, 475); };
+		window.onscroll = function(){ showgesture(455, 475, 180, 210); };
 		$('.first-nav').addClass('active');
 
 	} else if(window.location.href === location + '/dj'){
 
-		window.onscroll = function(){ showgesture(680, 700); };
+		window.onscroll = function(){ showgesture(680, 700, 1130, 1150); };
 		$('.second-nav').addClass('active');
 
 	} else if(window.location.href === location + '/bartender'){
 		$('.third-nav').addClass('active');
 	} else if(window.location.href === location + '/bartender/about'){
 		$('.fourth-nav').addClass('active');
+	} else if(window.location.href === location + '/sweetsixteen'){
+		window.onscroll = function(){ showgesture(1030, 1070, 1255, 1280); };
+		$('.fifth-nav').addClass('active');
+	} else if(window.location.href === location + '/contact'){
+		$('.sixth-nav').addClass('active');
 	}
 
 	console.log(window.location.href, '\n', window.location.host);

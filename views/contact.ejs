@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+	<title>sweetsixteen, dj, mc, bartender in the bay area - contact info</title>
+	<meta name="keywords" content="dj, bay, area, san leandro, oakland, dj san francisco" />
+	<meta name="description" content="If you want to plan the party of the year, lets plan it together and make an unforgetable experience for everyone! call <%= marcela %>" />
+    <meta name="author" content="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+
+Polystar Template
+
+http://www.templatemo.com/tm-408-polystar
+
+-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css">
+
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <script src="/js/jquery.fancybox.pack.js"></script> -->
+	<script src="/js/owl.carousel.js"></script>
+	<script src="/js/templatemo_custom.js"></script>
+</head>
+</head>
+<body class="ss-bg">
+	
+		<%- include partials/navbar.ejs %>
+	<section class="box-black box-contact">
+		<h2 style="color: white;">Send us an Email!</h2>
+		<p>Let's Plan Your Party Together!</p>
+		<p>Or Call Now By Clicking the Button</p>
+		<p><%= marcela %></p>
+		<a class="btn btn-default" href="tel:<%= marcela %>">Open Dialer</a>
+		<form id="form" class="form-group">
+			<label class="pull-left">Name</label>
+			<input class="form-control" type="text" id="s-name">	
+			<label class="pull-left">Message</label>
+			<textarea cols="5" rows="4" class="form-control" type="text" id="s-message"></textarea>
+				<br>
+			<p onclick="getinfo('s-message', 's-name', 'party planning');" class="btn btn-default">Submit</p>	    
+		</form>
+	</section>
+
+	<%- include partials/footer.ejs %>
+
+</body>
+</html>
