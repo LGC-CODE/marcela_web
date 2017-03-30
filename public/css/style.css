@@ -627,14 +627,14 @@ dj page
 
 
 .arrow-hover span {
-	position: absolute;
-	top: 75%;
-	left: 48.7%;
+	position: relative;
+	left: 1.7%;
 	-moz-animation: hoverInPlace 2s infinite;
 	-webkit-animation: hoverInPlace 2s infinite;
 	animation: hoverInPlace 2s infinite;
 	font-size: 33px;
 	color: white;
+	margin-top: 20%;
 }
 
 /*
