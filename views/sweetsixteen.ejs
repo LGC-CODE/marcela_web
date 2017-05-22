@@ -33,7 +33,10 @@ http://www.templatemo.com/tm-408-polystar
 	
 		<%- include partials/navbar.ejs %>
 	<section class="box-red ss-text">
-		<p>Want to create the best and unforgetable sweet sixteen party for your daughter? Call us today and lets plan it together!</p>
+		<div class="ss-header">
+			<span>Do you want to create the best and unforgetable sweet sixteen party? Call us today and lets plan it together!</span>
+			<span>Coreography, Decorations, Music, and Much More!</span>
+		</div>
 		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
 		<div class="arrow-hover">
 			<a href="#down">
@@ -42,7 +45,7 @@ http://www.templatemo.com/tm-408-polystar
 		</div>
 	</section>
 	<section id="down" class="box-purple">
-		<p>We are ready to take on any party size! Our services include high quality and responsible coordination. If you want everything to go smoothly on your party, plan it with us!</p>
+		<p>We are ready to take on any party size! Our services include high quality and responsible coordination. If you want everything to go smooth in your party, plan it with us!</p>
 		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
 	</section>
 	<section class="slider-ss-section box-pink">
@@ -50,6 +53,18 @@ http://www.templatemo.com/tm-408-polystar
 	</section>
 	<section class="box-yellow">
 		<p>The perfect party is just one call away! We ensure and take responsiblity that your party turns out the way You want it!</p>
+		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
+	</section>
+	<section class="box-purple">
+		<div class="coreography-box">
+			<h2>We Also Coordinate Coreography!</h2>
+			<p>Our team works together to coordinate precise dance movements that involves you in the coreography! We train the volunteer dancers so that the end result is pleasant for all your guests to see and enjoy.</p>
+			<strong>We also bring the best of us to the table, we design and decorate the tables to better the experience for your guests. Giving tables a clean, pleasant, and elegant finish!<br><span class="pull-right"> - Check out the tables on this video!</span></strong>
+		</div>
+	 	<video width="100%" controls>
+		  <source src="/videos/coreography.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video> 
 		<a class="btn btn-primary" href="tel:<%= marcela %>">Call Now <span class="glyphicon glyphicon-phone"></span></a>
 	</section>
 	<section class="box-black">
@@ -61,7 +76,7 @@ http://www.templatemo.com/tm-408-polystar
 			<label>Message</label>
 			<textarea cols="5" rows="4" class="form-control" type="text" id="s-message"></textarea>
 				<br>
-			<p onclick="getinfo('s-message', 's-name', 'sweetsixteen');" class="btn btn-default">Submit</p 			    
+			<p onclick="getinfo('s-message', 's-name', 'sweetsixteen');" class="btn btn-primary">Submit</p 			    
 		</form>
 	</section>
 
