@@ -7,9 +7,9 @@
 <body class="container" ng-app="blog-app" ng-controller="inputCtrl">
 	<form method="post" action="http://104.236.186.74:3000/blog/new" class="form-group" enctype="multipart/form-data">
 		<label>title</label>
-		<input class="form-control" type="text" name="title"><br/>
+		<input ng-model="info.title" ng-blur="saveToStorage(info)" class="form-control" type="text" name="title"><br/>
 		<label>body</label>
-		<textarea cols="6" rows="4" class="form-control" type="text" name="body"></textarea>
+		<textarea ng-model="info.body" ng-blur="saveToStorage(info)" cols="6" rows="4" class="form-control" type="text" name="body"></textarea>
 		<label>Choose File</label>
 		<input type="file" name="file0">
 		<button type="submit" class="btn btn-default">Submit</button>

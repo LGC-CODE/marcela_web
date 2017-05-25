@@ -54,8 +54,8 @@ http://www.templatemo.com/tm-408-polystar
 					<h1>{{ article.title }}</h1>
 				  	<a class="btn btn-success" href="/blog/single/#!/home/{{ article._id }}">View Article</a>
 				  	<p style="cursor: default;" class="btn btn-success pull-right">
-						<span ng-show="!article.isLiked" style="color: white; cursor: pointer;" ng-click="incrementUpvotes(article)" class="fa fa-thumbs-up"></span>
-						<span ng-show="article.isLiked" style="color: blue; cursor: pointer;" ng-click="decrementUpvotes(article)" class="fa fa-thumbs-up"></span>
+						<span ng-show="!article.isLiked" style="color: #b200ff; cursor: pointer;" ng-click="incrementUpvotes(article)" class="fa fa-thumbs-up"></span>
+						<span ng-show="article.isLiked" style="color: black; cursor: pointer;" ng-click="decrementUpvotes(article)" class="fa fa-thumbs-up"></span>
 						Likes {{ article.upvotes }}
 					</p>
 				</div>

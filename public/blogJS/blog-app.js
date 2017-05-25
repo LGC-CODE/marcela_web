@@ -89,7 +89,7 @@ app.controller('singleCtrl', ['$scope', 'blogService', 'blog', '$window', '$stat
 
 		blogService.newComment(blog._id, $scope.user);
 
-		blog.comments.push({name: $scope.user.name, comment: $scope.user.comment});
+		blog.comments.push({name: $scope.user.name, comment: $scope.user.comment, upvotes: 0});
 
 		$scope.user = "";
 	};

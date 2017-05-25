@@ -10,31 +10,24 @@
 
 	<title>{{ meta.title }}</title>
 	
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/animate.min.css">
-	<link rel="stylesheet" href="/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/css/component.css">
-	
-	<link rel="stylesheet" href="/css/owl.theme.css">
-	<link rel="stylesheet" href="/css/vegas.min.css">
-	<link rel="stylesheet" href="/css/style.css">
-  <link href="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/owl.carousel.css" rel="stylesheet" type="text/css">
 
-	<!-- Google web font  -->
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css">
+
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <script src="/js/jquery.fancybox.pack.js"></script> -->
+	<script src="/js/owl.carousel.js"></script>
+	<script src="/js/templatemo_custom.js"></script>
 	
 	<!-- Javascript  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-	<script src="/js/jquery.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/vegas.min.js"></script>
-	<script src="/js/modernizr.custom.js"></script>
-	<script src="/js/toucheffects.js"></script>
-	<script src="/js/owl.carousel.min.js"></script>
-	<script src="/js/smoothscroll.js"></script>
-	<script src="/js/wow.min.js"></script>
-	<script src="/js/custom.js"></script>
 	<script src="/blogJS/blog-app.js"></script>
 	<script src="/blogJS/factoryJS/factory.js"></script>
 
@@ -72,7 +65,7 @@
 					<p>{{ comment.comment }}</p>
 					<p>
 						<span ng-show="!comment.isLiked" style="color: white; cursor: pointer;" ng-click="incrementComUpvotes(comment)" class="fa fa-thumbs-up"></span>
-						<span ng-show="comment.isLiked" style="color: blue; cursor: pointer;" ng-click="decrementComUpvotes(comment)" class="fa fa-thumbs-up"></span>
+						<span ng-show="comment.isLiked" style="color: black; cursor: pointer;" ng-click="decrementComUpvotes(comment)" class="fa fa-thumbs-up"></span>
 						Likes {{ comment.upvotes }}
 					</p>
 					

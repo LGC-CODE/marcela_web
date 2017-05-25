@@ -444,8 +444,24 @@ panels
 }
 
 .blog-body {
-  background: #94979ccc;
-  padding: 5%;
+	background: rgb(255, 164, 0);
+	padding: 5%;
+}
+
+.btn-success {
+	color: #b200ff !important;
+	background-color: #ffc73a !important;
+	border-color: #b200ff !important;
+}
+
+.btn {
+	font-size: 20px !important;
+}
+
+.btn-success:hover {
+	color: #fff;
+	background-color: #fff;
+	border-color: #b200ff;
 }
 
 .blog-body h1 {
@@ -457,6 +473,10 @@ panels
 
 .blog-body img {
   width: 100%;
+}
+
+.blog {
+	background: #a900ff;
 }
 
 .blog-desc p {
