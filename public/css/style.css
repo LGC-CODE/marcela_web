@@ -271,11 +271,16 @@ section {
 }
 
 .btn-primary {
-	color: #fff !important;
-	background-color: #5e67ef !important;
-	border-color: #fff !important;
+	color: #0f00ff !important;
+	background-color: #fcab00 !important;
+	border-color: #0007ff !important;
 	padding: 2% 10% !important;
 	margin: 4%;
+}
+
+p {
+	margin: 0 0 10px;
+	font-size: 20px !important;
 }
 
 .btn-primary:hover {
@@ -357,9 +362,9 @@ panels
 
 .panel-primary > .panel-heading {
 	color: #fff !important;
-	background-color: rebeccapurple !important;
+	background-color: #c80 !important;
 	border-color: #fff !important;
-} 
+}
 
 .panel-primary {
 	border-color: #fff !important;
@@ -416,9 +421,77 @@ panels
     }
 }
 
+
+
+/*---------------------------------------
+   blog styles       
+-----------------------------------------*/
+
+.blog-content {
+	display: inline-block;
+	width: 100%;
+	margin: 22% 0 0 0;
+}
+
+.blog-content {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}
+
+.blog-box {
+  padding: 10% 3%;
+}
+
+.blog-body {
+  background: #94979ccc;
+  padding: 5%;
+}
+
+.blog-body h1 {
+  font-size: 1.6pc;
+  line-height: 2pc;
+  color: white;
+  font-weight: 500;
+}
+
+.blog-body img {
+  width: 100%;
+}
+
+.blog-desc p {
+  font-size: 11px;
+  line-height: 1.8pc;
+  margin-top: 30%;
+}
+
+.blog-desc {
+  background: #000C;
+  color: #fff;
+}
+
+.blog-desc a {
+  background: #fff;
+  color: #000;
+}
+
+.blog-desc h1 {
+  font-size: 1pc;
+  line-height: 1.6rem;
+  background: #747474;
+  position: relative;
+  padding: 4%;
+}
+
+
+
 @media (max-width: 490px) { 
 	.box-purple {
 		padding: 15% 1% !important;
+	}
+
+	.main-box {
+		width: 100% !important;
 	}
 
 	body {
@@ -661,9 +734,9 @@ main index page
 	content: "";
 	display: block;
 	position: fixed;
-	top: -27%;
+	top: -80%;
 	width: 100%;
-	height: 135%;
+	height: 182%;
 	z-index: -10;
 	background: url('../images/hexagon-bg.jpeg') no-repeat;
 	-webkit-background-size: cover;
@@ -681,10 +754,11 @@ main index page
 
 .main-box {
 	background: rgba(255, 255, 255, 0.38);
-	height: 295px;
-	border: 1px solid #c6b8b8;
+	height: 330px;
 	color: #000;
 	text-shadow: 0px 0px 8px #fff;
+	width: 30%;
+	margin: 1%;
 }
 
 /******************/
@@ -696,7 +770,7 @@ sweet sixteen
 */
 
 .ss-text .ss-header {
-	background: rgba(97, 116, 241, 0.84) url('/images/coreo.png');
+	background: rgba(97, 116, 241, 0.84);
 	padding: 2%;
 	border-radius: 30px 0px 0px 30px;
 	font-size: 1.5pc;
@@ -707,19 +781,20 @@ sweet sixteen
 
 .ss-text .ss-header span {
 	display: inline-block;
-	background: #00000080;
-	padding: 45px;
+	padding: 20px;
+	border-radius: 0 0 12px 13px;
+	color: #fb0;
 }
 
 .ss-bg::before {
 	content: "";
 	display: block;
 	position: fixed;
-	top: -35%;
+	top: -24%;
 	width: 145%;
 	height: 135%;
 	z-index: -10;
-	background: url('../images/ss0.gif') no-repeat;
+	background: url('../images/ss0.jpeg') no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -762,7 +837,8 @@ sweet sixteen
 */
 
 .box-contact {
-	background: #3bbff399;
+	background: rgba(226, 79, 255, 0.71);
+	color: #ffd500 !important;
 }
 
 .form-control {

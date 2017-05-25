@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<head>
+	<title>best dj service in the bay area, local dj service, affordable dj near oakland, great dj service in san francisco</title>
+	<meta name="keywords" content="dj, bay, area, san leandro, oakland, dj san francisco" />
+	<meta name="description" content="dj in the bay area, party dj, affordable dj, quality dj service, best dj in the bay area, call <%= marcela %>" />
+  <meta name="author" content="">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+
+Polystar Template
+
+http://www.templatemo.com/tm-408-polystar
+
+-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css">
+
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <script src="/js/jquery.fancybox.pack.js"></script> -->
+	<script src="/js/owl.carousel.js"></script>
+	<script src="/js/templatemo_custom.js"></script>
+</head>
+<body ng-app="blog-app" ng-controller="blogCtrl" id="top" data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+
+<!-- Preloader section -->
+
+<div class="preloader">
+	 <div class="sk-spinner sk-spinner-pulse"></div>
+</div>
+
+
+<!-- Navigation section  -->
+<%- include partials/navbar.ejs %>
+
+<!-- Home section -->
+<ui-view></ui-view>
+<script type="text/ng-template" id="/home.html">
+	<section class="blog">
+		<div class="blog-content">
+			<div ng-repeat="article in articles" class=" col-md-6 col-sm-6 blog-box">
+				<div class="blog-body">
+					<img src="{{ article.img0 }}">
+					<h1>{{ article.title }}</h1>
+				  	<a class="btn btn-success" href="/blog/single/#!/home/{{ article._id }}">View Article</a>
+				  	<p style="cursor: default;" class="btn btn-success pull-right">
+						<span ng-show="!article.isLiked" style="color: white; cursor: pointer;" ng-click="incrementUpvotes(article)" class="fa fa-thumbs-up"></span>
+						<span ng-show="article.isLiked" style="color: blue; cursor: pointer;" ng-click="decrementUpvotes(article)" class="fa fa-thumbs-up"></span>
+						Likes {{ article.upvotes }}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</script>
+
+
+
+
+<!-- Footer section -->
+<%- include partials/footer.ejs %>
+				
+
+<!-- Back top -->
+<a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- Javascript  -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+<script src="/blogJS/blog-app.js"></script>
+<script src="/blogJS/factoryJS/factory.js"></script>
+
+</body>
+</html>

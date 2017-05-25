@@ -4,6 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var prerenderServer = require('prerender-node');
+
+
+require('./models/articleModel');
+require('./models/commentsModel');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -11,12 +17,21 @@ var bartender = require('./routes/bartender');
 var dj = require('./routes/dj');
 var sweetsixteen = require('./routes/sweetsixteen');
 var contact = require('./routes/contact');
+var blog = require('./routes/blog');
+
+mongoose.connect('mongodb://104.236.186.74:27017/marcela-db' , function(err){
+
+  console.log('servers running... Marcela');
+
+});
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(prerenderServer.set('prerenderServiceUrl', 'http://138.197.210.159:3000'));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -25,6 +40,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/blog/', blog);
 
 app.use('/', index);
 app.use('/users', users);

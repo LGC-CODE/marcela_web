@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="blog-app" lang="en" ng-controller="metaCtrl">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="{{ meta.body }}">
+	<meta name="description" content="{{ meta.body }}">
+
+	<title>{{ meta.title }}</title>
+	
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/animate.min.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/component.css">
+	
+	<link rel="stylesheet" href="/css/owl.theme.css">
+	<link rel="stylesheet" href="/css/vegas.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+  <link href="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+	<!-- Google web font  -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	
+	<!-- Javascript  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/vegas.min.js"></script>
+	<script src="/js/modernizr.custom.js"></script>
+	<script src="/js/toucheffects.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/smoothscroll.js"></script>
+	<script src="/js/wow.min.js"></script>
+	<script src="/js/custom.js"></script>
+	<script src="/blogJS/blog-app.js"></script>
+	<script src="/blogJS/factoryJS/factory.js"></script>
+
+</head>
+<body id="top" data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+
+<!-- Preloader section -->
+
+<div class="preloader">
+	 <div class="sk-spinner sk-spinner-pulse"></div>
+</div>
+
+
+<!-- Navigation section  -->
+<%- include partials/navbar.ejs %>
+
+<!-- Home section -->
+<ui-view></ui-view>
+<script type="text/ng-template" id="/single.html">
+	<section class="blog">
+		<div class="blog-content">
+			<div class=" col-md-6 col-sm-6 blog-box">
+				<div class="blog-body">
+					<img src="{{ article.img0 }}">
+					<h1>{{ article.title }}</h1>
+					<p>{{ article.body }}</p>
+				  	<a class="btn btn-success" href="/blog">Go Back</a>
+				</div>
+			</div>
+			<div class=" col-md-6 col-sm-6 blog-box">
+				<div ng-repeat="comment in article.comments" class="blog-body">
+					<img src="">
+					<h1>{{ comment.name }}</h1>
+					<p>{{ comment.comment }}</p>
+					<p>
+						<span ng-show="!comment.isLiked" style="color: white; cursor: pointer;" ng-click="incrementComUpvotes(comment)" class="fa fa-thumbs-up"></span>
+						<span ng-show="comment.isLiked" style="color: blue; cursor: pointer;" ng-click="decrementComUpvotes(comment)" class="fa fa-thumbs-up"></span>
+						Likes {{ comment.upvotes }}
+					</p>
+					
+				</div>
+				<form ng-submit="newComment()" class="form-group">
+					<label>Name:</label>
+					<input class="form-control" ng-model="user.name" type="text" name="name"><br>
+					<label>Comment:</label>
+					<input class="form-control" ng-model="user.comment" type="text" name="comment"><br>
+			  		<button class="btn btn-success" type="submit">Post Comment</button>
+			  	</form>
+			</div>
+		</div>
+	</section>
+</script>
+
+
+
+
+<!-- Footer section -->
+
+<%- include partials/footer.ejs %>
+
+<!-- Back top -->
+<a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+</body>
+</html>
