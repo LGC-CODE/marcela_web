@@ -57,7 +57,7 @@ router.post('/new', upload.any(), function(req, res, next){
 		if(err){ return next(err); }
 
 		console.log('saved');
-		res.redirect('http://perezcontractingca.com/blog');
+		res.redirect('http://' + req.headers.host + '/blog');
 
 	});
 });
