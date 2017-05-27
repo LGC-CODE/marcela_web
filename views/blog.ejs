@@ -48,16 +48,23 @@ http://www.templatemo.com/tm-408-polystar
 <script type="text/ng-template" id="/home.html">
 	<section class="blog">
 		<div class="blog-content">
-			<div ng-repeat="article in articles" class=" col-md-6 col-sm-6 blog-box">
+			<div ng-repeat="article in articles" class=" col-md-4 col-sm-4 blog-box">
 				<div class="blog-body">
-					<img src="{{ article.img0 }}">
+					<div class="blog-image-wrapper">
+						<img src="{{ article.img0 }}">
+					</div>
 					<h1>{{ article.title }}</h1>
+					<div class="blog-buttons">
 				  	<a class="btn btn-success" href="/blog/single/#!/home/{{ article._id }}">View Article</a>
-				  	<p style="cursor: default;" class="btn btn-success pull-right">
-						<span ng-show="!article.isLiked" style="color: #b200ff; cursor: pointer;" ng-click="incrementUpvotes(article)" class="fa fa-thumbs-up"></span>
-						<span ng-show="article.isLiked" style="color: black; cursor: pointer;" ng-click="decrementUpvotes(article)" class="fa fa-thumbs-up"></span>
-						Likes {{ article.upvotes }}
-					</p>
+				  	<a class="btn btn-success" href="/blog/single/#!/home/{{ article._id }}">
+				  		Comments {{ article.comments.length || 0 }}
+				  	</a>
+				  	<p style="cursor: default;" class="btn btn-success">
+							<span ng-show="!article.isLiked" style="color: white; cursor: pointer;" ng-click="incrementUpvotes(article)" class="fa fa-thumbs-up"></span>
+							<span ng-show="article.isLiked" style="color: black; cursor: pointer;" ng-click="decrementUpvotes(article)" class="fa fa-thumbs-up"></span>
+							Likes {{ article.upvotes }}
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -69,10 +76,6 @@ http://www.templatemo.com/tm-408-polystar
 
 <!-- Footer section -->
 <%- include partials/footer.ejs %>
-				
-
-<!-- Back top -->
-<a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
 
 <!-- Javascript  -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>

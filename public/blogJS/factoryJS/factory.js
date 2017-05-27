@@ -114,9 +114,7 @@ app.factory('blogService', ['$http', function($http){
 	}
 
 	o.newComment = function(id, data){
-		$http.post('/blog/get/single/' + id + '/newComment/', data).success(function(data){
-			console.log('comment successfully added');
-		});
+		return $http.post('/blog/get/single/' + id + '/newComment/', data);
 	}
 
 	o.upvoteComment = function(edition, comment) {

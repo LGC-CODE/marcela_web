@@ -103,7 +103,11 @@ router.post('/get/single/:single/newComment', function(req, res){
 		req.articleObject.save(function(err, event){
 			if(err){ return next(err); }
 
-			res.json(event);
+			req.articleObject.populate('comments', function(err, revista){
+				if(err){ return next(err); }
+				
+				res.json(revista);
+			});
 		})
 	})
 });
