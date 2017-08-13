@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var prerenderServer = require('prerender-node');
+var assert = require('assert');
 
 
 require('./models/articleModel');
@@ -19,11 +20,11 @@ var sweetsixteen = require('./routes/sweetsixteen');
 var contact = require('./routes/contact');
 var blog = require('./routes/blog');
 
-mongoose.connect('mongodb://104.236.186.74:27017/marcela-db' , function(err){
-
-  console.log('servers running... Marcela');
-
+mongoose.connect('mongodb://104.236.186.74:27017/marcela-db?ssl=true', null, function(err){
+  assert.equal(null, err);
+  console.log('servers running');
 });
+
 
 var app = express();
 
