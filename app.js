@@ -20,10 +20,10 @@ var sweetsixteen = require('./routes/sweetsixteen');
 var contact = require('./routes/contact');
 var blog = require('./routes/blog');
 
-mongoose.connect('mongodb://104.236.186.74:27017/marcela-db?ssl=true', null, function(err){
-  assert.equal(null, err);
-  console.log('servers running');
-});
+// mongoose.connect('mongodb://104.236.186.74:27017/marcela-db?ssl=true', null, function(err){
+//   assert.equal(null, err);
+//   console.log('servers running');
+// });
 
 
 var app = express();

@@ -17,7 +17,7 @@ body::before {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: 100%;
+	background: cover;
 }
 
 .form-control {
@@ -291,9 +291,11 @@ p {
 
 .x-intercept {
 	background: #2fab69;
-	color: white;
-	border-top: 14px solid #66e966;
-	display: inline-block;
+    color: white;
+    border-top: 14px solid #66e966;
+    display: block;
+    height: 43em;
+    width: 100%;
 }
 
 .panel {
@@ -304,8 +306,9 @@ p {
 
 .middle {
 	width: 100%;
-	padding: 10%;
-	display: inline-block;
+    height: 40em;
+    padding: 10%;
+    display: block;
 }
 
 .pictureFrame{
@@ -607,7 +610,7 @@ panels
 		width: 110%;
 		right: 0%;
 		background-position-x: 40%;
-		background-size: 242%;
+		background-size: cover;
 	}
 	.box-purp {
 		padding: 52% 25px;
